@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wxx/Project/socket2/src/my_server.cpp
+/home/wxx/Project/ServerTest/socket2/src/my_server.cpp
 iostream
 -
 stdio.h

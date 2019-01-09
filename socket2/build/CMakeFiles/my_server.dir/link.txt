@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/my_server.dir/src/my_server.cpp.o  -o my_server 
+/usr/bin/c++     CMakeFiles/my_server.dir/src/my_server.cpp.o  -o my_server 

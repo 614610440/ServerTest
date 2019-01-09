@@ -4,11 +4,13 @@
 #include<sys/types.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
+#include<arpa/inet.h>
 #include<netdb.h>
 #include<string.h>
 #include<errno.h>
  
 #define PORT 2345
+#define ADDR "192.168.1.106"
  
 int count = 1;
  
@@ -27,7 +29,8 @@ int main()
     bzero(&server_addr, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
-    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    // server_addr.sin_addr.s_addr = htonl(0xC0A8016F);
+    server_addr.sin_addr.s_addr = inet_addr(ADDR);
     //客户端发出请求
 
     if (connect(sockfd, (struct sockaddr *)(&server_addr), sizeof(struct sockaddr)) == -1)

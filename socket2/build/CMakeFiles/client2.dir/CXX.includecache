@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wxx/Project/socket2/src/client2.cpp
+/home/wxx/Project/ServerTest/socket2/src/client2.cpp
 stdio.h
 -
 unistd.h
@@ -18,6 +18,8 @@ sys/types.h
 sys/socket.h
 -
 netinet/in.h
+-
+arpa/inet.h
 -
 netdb.h
 -

@@ -11,6 +11,7 @@
  
 #define PORT  2345
 #define MAXSIZE 1024
+#define ADDR "192.168.1.111"
  
 int main(int argc, char *argv[])
 {
@@ -36,7 +37,8 @@ int main(int argc, char *argv[])
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
     //设置ip为本机IP
-    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    // server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    server_addr.sin_addr.s_addr = inet_addr(ADDR);
   
     if (bind(sockfd, (struct sockaddr*)(&server_addr), sizeof(struct sockaddr)) < 0)
     {

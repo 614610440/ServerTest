@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wxx/Project/socket2
+CMAKE_SOURCE_DIR = /home/wxx/Project/ServerTest/socket2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wxx/Project/socket2/build
+CMAKE_BINARY_DIR = /home/wxx/Project/ServerTest/socket2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/socket2/build/CMakeFiles /home/wxx/Project/socket2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/ServerTest/socket2/build/CMakeFiles /home/wxx/Project/ServerTest/socket2/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/socket2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/ServerTest/socket2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named client3
+
+# Build rule for target.
+client3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client3
+.PHONY : client3
+
+# fast build rule for target.
+client3/fast:
+	$(MAKE) -f CMakeFiles/client3.dir/build.make CMakeFiles/client3.dir/build
+.PHONY : client3/fast
+
+#=============================================================================
+# Target rules for targets named server3
+
+# Build rule for target.
+server3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server3
+.PHONY : server3
+
+# fast build rule for target.
+server3/fast:
+	$(MAKE) -f CMakeFiles/server3.dir/build.make CMakeFiles/server3.dir/build
+.PHONY : server3/fast
 
 #=============================================================================
 # Target rules for targets named client
@@ -242,6 +268,33 @@ src/client2.cpp.s:
 	$(MAKE) -f CMakeFiles/client2.dir/build.make CMakeFiles/client2.dir/src/client2.cpp.s
 .PHONY : src/client2.cpp.s
 
+src/client3.o: src/client3.cpp.o
+
+.PHONY : src/client3.o
+
+# target to build an object file
+src/client3.cpp.o:
+	$(MAKE) -f CMakeFiles/client3.dir/build.make CMakeFiles/client3.dir/src/client3.cpp.o
+.PHONY : src/client3.cpp.o
+
+src/client3.i: src/client3.cpp.i
+
+.PHONY : src/client3.i
+
+# target to preprocess a source file
+src/client3.cpp.i:
+	$(MAKE) -f CMakeFiles/client3.dir/build.make CMakeFiles/client3.dir/src/client3.cpp.i
+.PHONY : src/client3.cpp.i
+
+src/client3.s: src/client3.cpp.s
+
+.PHONY : src/client3.s
+
+# target to generate assembly for a file
+src/client3.cpp.s:
+	$(MAKE) -f CMakeFiles/client3.dir/build.make CMakeFiles/client3.dir/src/client3.cpp.s
+.PHONY : src/client3.cpp.s
+
 src/my_client.o: src/my_client.cpp.o
 
 .PHONY : src/my_client.o
@@ -350,6 +403,33 @@ src/server2.cpp.s:
 	$(MAKE) -f CMakeFiles/server2.dir/build.make CMakeFiles/server2.dir/src/server2.cpp.s
 .PHONY : src/server2.cpp.s
 
+src/server3.o: src/server3.cpp.o
+
+.PHONY : src/server3.o
+
+# target to build an object file
+src/server3.cpp.o:
+	$(MAKE) -f CMakeFiles/server3.dir/build.make CMakeFiles/server3.dir/src/server3.cpp.o
+.PHONY : src/server3.cpp.o
+
+src/server3.i: src/server3.cpp.i
+
+.PHONY : src/server3.i
+
+# target to preprocess a source file
+src/server3.cpp.i:
+	$(MAKE) -f CMakeFiles/server3.dir/build.make CMakeFiles/server3.dir/src/server3.cpp.i
+.PHONY : src/server3.cpp.i
+
+src/server3.s: src/server3.cpp.s
+
+.PHONY : src/server3.s
+
+# target to generate assembly for a file
+src/server3.cpp.s:
+	$(MAKE) -f CMakeFiles/server3.dir/build.make CMakeFiles/server3.dir/src/server3.cpp.s
+.PHONY : src/server3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -358,6 +438,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... client3"
+	@echo "... server3"
 	@echo "... client"
 	@echo "... server"
 	@echo "... client2"
@@ -370,6 +452,9 @@ help:
 	@echo "... src/client2.o"
 	@echo "... src/client2.i"
 	@echo "... src/client2.s"
+	@echo "... src/client3.o"
+	@echo "... src/client3.i"
+	@echo "... src/client3.s"
 	@echo "... src/my_client.o"
 	@echo "... src/my_client.i"
 	@echo "... src/my_client.s"
@@ -382,6 +467,9 @@ help:
 	@echo "... src/server2.o"
 	@echo "... src/server2.i"
 	@echo "... src/server2.s"
+	@echo "... src/server3.o"
+	@echo "... src/server3.i"
+	@echo "... src/server3.s"
 .PHONY : help
 
 
