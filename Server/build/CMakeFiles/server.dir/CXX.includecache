@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wxx/Project/ServerTest/Server/src/server.cpp
+iostream
+-
+string
+-
+cstring
+-
+cstdlib
+-
+sys/types.h
+-
+sys/socket.h
+-
+sys/unistd.h
+-
+netinet/in.h
+-
+fstream
+-
+

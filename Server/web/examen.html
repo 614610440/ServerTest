@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>welcome</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/examen.css')}}" type="text/css" />
+		<script type="text/javascript">
+			function ValidateRadio(question_size)
+			{
+				var val_number = document.getElementById("user_number").value;
+				var val_name = document.getElementById("user_name").value;
+				var size = parseInt(question_size);
+				if (val_number == "")
+				{
+					alert("请填写编号");
+					return false;
+				}
+				else if (val_name == "")
+				{
+					alert("请填写姓名");
+					return false;
+				}
+
+				for (var i = 1; i <= size; i++)
+				{
+					var radios = document.getElementsByName("question"+i);
+					var have_value = false;
+					for (var j = 0; j < radios.length; j++)
+					{
+						if (radios[j].checked==true)
+						{
+							have_value = true;
+						}
+					}
+
+					if (have_value == false)
+					{
+						alert("请完成所有题目");
+						return false;	
+					}
+				}
+				return true;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="head">
+				<h1>性格测试</h1>
+			</div>
+			<form action="/submit_result" onsubmit="return ValidateRadio('{{ question_size|safe }}')">
+				<div>
+					<input id="inputlogintoregister" name="button" type="submit" value="提交"></input>
+					<div>
+						<p class="user_number"><input id ="user_number" name="user_number" type="text">编号</input></p>
+						<p class="user_name"><input id ="user_name" name="user_name" type="text">姓名</input></p>
+					</div>
+					{% for question in questions %}
+					<div>
+						<p class="question">{{ question.number|safe }}. {{ question.name|safe }}</p>
+						<p class="answer"><input name="question{{ question.number|safe }}" type="radio" value="A">{{ question.result1|safe }}</input></p>
+						<p class="answer"><input name="question{{ question.number|safe }}" type="radio" value="B">{{ question.result2|safe }}</input></p>
+						<p class="answer"><input name="question{{ question.number|safe }}" type="radio" value="C">{{ question.result3|safe }}</input></p>
+						<br>
+					</div>
+					{% endfor %}
+					<input id="inputlogintoregister" name="button" type="submit" value="提交"></input>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
