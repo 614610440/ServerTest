@@ -9,6 +9,7 @@
 #include<unistd.h>
 
 const int port = 8888;
+const char* ip = "192.168.1.111"; //服务器端IP
 
 int main()
 {
@@ -22,7 +23,8 @@ int main()
     struct sockaddr_in addr; //绑定信息，即命名socket
     addr.sin_family = AF_INET;
     addr.sin_port = htons(port);
-    addr.sin_addr.s_addr =  htonl(INADDR_ANY);     // 使用自己的地址
+    addr.sin_addr.s_addr = inet_addr(ip); 
+    // addr.sin_addr.s_addr =  htonl(INADDR_ANY);     // 使用自己的地址
     /*inet_addr函数将用点分十进制字符串表示的
 	  IPv4地址转化为用网络字节序整数表示的IPv4地址 */
 
