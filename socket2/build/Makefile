@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named client4
+
+# Build rule for target.
+client4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client4
+.PHONY : client4
+
+# fast build rule for target.
+client4/fast:
+	$(MAKE) -f CMakeFiles/client4.dir/build.make CMakeFiles/client4.dir/build
+.PHONY : client4/fast
+
+#=============================================================================
 # Target rules for targets named client3
 
 # Build rule for target.
@@ -187,6 +200,19 @@ my_server: cmake_check_build_system
 my_server/fast:
 	$(MAKE) -f CMakeFiles/my_server.dir/build.make CMakeFiles/my_server.dir/build
 .PHONY : my_server/fast
+
+#=============================================================================
+# Target rules for targets named server4
+
+# Build rule for target.
+server4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server4
+.PHONY : server4
+
+# fast build rule for target.
+server4/fast:
+	$(MAKE) -f CMakeFiles/server4.dir/build.make CMakeFiles/server4.dir/build
+.PHONY : server4/fast
 
 #=============================================================================
 # Target rules for targets named my_client
@@ -294,6 +320,33 @@ src/client3.s: src/client3.cpp.s
 src/client3.cpp.s:
 	$(MAKE) -f CMakeFiles/client3.dir/build.make CMakeFiles/client3.dir/src/client3.cpp.s
 .PHONY : src/client3.cpp.s
+
+src/client4.o: src/client4.cpp.o
+
+.PHONY : src/client4.o
+
+# target to build an object file
+src/client4.cpp.o:
+	$(MAKE) -f CMakeFiles/client4.dir/build.make CMakeFiles/client4.dir/src/client4.cpp.o
+.PHONY : src/client4.cpp.o
+
+src/client4.i: src/client4.cpp.i
+
+.PHONY : src/client4.i
+
+# target to preprocess a source file
+src/client4.cpp.i:
+	$(MAKE) -f CMakeFiles/client4.dir/build.make CMakeFiles/client4.dir/src/client4.cpp.i
+.PHONY : src/client4.cpp.i
+
+src/client4.s: src/client4.cpp.s
+
+.PHONY : src/client4.s
+
+# target to generate assembly for a file
+src/client4.cpp.s:
+	$(MAKE) -f CMakeFiles/client4.dir/build.make CMakeFiles/client4.dir/src/client4.cpp.s
+.PHONY : src/client4.cpp.s
 
 src/my_client.o: src/my_client.cpp.o
 
@@ -430,6 +483,33 @@ src/server3.cpp.s:
 	$(MAKE) -f CMakeFiles/server3.dir/build.make CMakeFiles/server3.dir/src/server3.cpp.s
 .PHONY : src/server3.cpp.s
 
+src/server4.o: src/server4.cpp.o
+
+.PHONY : src/server4.o
+
+# target to build an object file
+src/server4.cpp.o:
+	$(MAKE) -f CMakeFiles/server4.dir/build.make CMakeFiles/server4.dir/src/server4.cpp.o
+.PHONY : src/server4.cpp.o
+
+src/server4.i: src/server4.cpp.i
+
+.PHONY : src/server4.i
+
+# target to preprocess a source file
+src/server4.cpp.i:
+	$(MAKE) -f CMakeFiles/server4.dir/build.make CMakeFiles/server4.dir/src/server4.cpp.i
+.PHONY : src/server4.cpp.i
+
+src/server4.s: src/server4.cpp.s
+
+.PHONY : src/server4.s
+
+# target to generate assembly for a file
+src/server4.cpp.s:
+	$(MAKE) -f CMakeFiles/server4.dir/build.make CMakeFiles/server4.dir/src/server4.cpp.s
+.PHONY : src/server4.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -438,12 +518,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... client4"
 	@echo "... client3"
 	@echo "... server3"
 	@echo "... client"
 	@echo "... server"
 	@echo "... client2"
 	@echo "... my_server"
+	@echo "... server4"
 	@echo "... my_client"
 	@echo "... server2"
 	@echo "... src/client.o"
@@ -455,6 +537,9 @@ help:
 	@echo "... src/client3.o"
 	@echo "... src/client3.i"
 	@echo "... src/client3.s"
+	@echo "... src/client4.o"
+	@echo "... src/client4.i"
+	@echo "... src/client4.s"
 	@echo "... src/my_client.o"
 	@echo "... src/my_client.i"
 	@echo "... src/my_client.s"
@@ -470,6 +555,9 @@ help:
 	@echo "... src/server3.o"
 	@echo "... src/server3.i"
 	@echo "... src/server3.s"
+	@echo "... src/server4.o"
+	@echo "... src/server4.i"
+	@echo "... src/server4.s"
 .PHONY : help
 
 

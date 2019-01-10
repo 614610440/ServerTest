@@ -37,12 +37,12 @@ int main(int argc, char** argv){
         return 0;
     }
 
-    printf("send msg to server: \n");
-    fgets(sendline, 4096, stdin);
-    if( send(sockfd, sendline, strlen(sendline), 0) < 0){
-        printf("send msg error: %s(errno: %d)\n", strerror(errno), errno);
-        return 0;
-    }
+    // printf("send msg to server: \n");
+    // fgets(sendline, 4096, stdin);
+    // if( send(sockfd, sendline, strlen(sendline), 0) < 0){
+    //     printf("send msg error: %s(errno: %d)\n", strerror(errno), errno);
+    //     return 0;
+    // }
     close(sockfd);
     return 0;
 }

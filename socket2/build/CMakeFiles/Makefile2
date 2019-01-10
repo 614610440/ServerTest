@@ -60,6 +60,43 @@ CMAKE_SOURCE_DIR = /home/wxx/Project/ServerTest/socket2
 CMAKE_BINARY_DIR = /home/wxx/Project/ServerTest/socket2/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/client4.dir
+
+# All Build rule for target.
+CMakeFiles/client4.dir/all:
+	$(MAKE) -f CMakeFiles/client4.dir/build.make CMakeFiles/client4.dir/depend
+	$(MAKE) -f CMakeFiles/client4.dir/build.make CMakeFiles/client4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=7,8 "Built target client4"
+.PHONY : CMakeFiles/client4.dir/all
+
+# Include target in all.
+all: CMakeFiles/client4.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/client4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/ServerTest/socket2/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/client4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/ServerTest/socket2/build/CMakeFiles 0
+.PHONY : CMakeFiles/client4.dir/rule
+
+# Convenience name for target.
+client4: CMakeFiles/client4.dir/rule
+
+.PHONY : client4
+
+# clean rule for target.
+CMakeFiles/client4.dir/clean:
+	$(MAKE) -f CMakeFiles/client4.dir/build.make CMakeFiles/client4.dir/clean
+.PHONY : CMakeFiles/client4.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/client4.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/client3.dir
 
 # All Build rule for target.
@@ -103,7 +140,7 @@ clean: CMakeFiles/client3.dir/clean
 CMakeFiles/server3.dir/all:
 	$(MAKE) -f CMakeFiles/server3.dir/build.make CMakeFiles/server3.dir/depend
 	$(MAKE) -f CMakeFiles/server3.dir/build.make CMakeFiles/server3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=15,16 "Built target server3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=17,18 "Built target server3"
 .PHONY : CMakeFiles/server3.dir/all
 
 # Include target in all.
@@ -177,7 +214,7 @@ clean: CMakeFiles/client.dir/clean
 CMakeFiles/server.dir/all:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=11,12 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=13,14 "Built target server"
 .PHONY : CMakeFiles/server.dir/all
 
 # Include target in all.
@@ -251,7 +288,7 @@ clean: CMakeFiles/client2.dir/clean
 CMakeFiles/my_server.dir/all:
 	$(MAKE) -f CMakeFiles/my_server.dir/build.make CMakeFiles/my_server.dir/depend
 	$(MAKE) -f CMakeFiles/my_server.dir/build.make CMakeFiles/my_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=9,10 "Built target my_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=11,12 "Built target my_server"
 .PHONY : CMakeFiles/my_server.dir/all
 
 # Include target in all.
@@ -282,13 +319,50 @@ clean: CMakeFiles/my_server.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/server4.dir
+
+# All Build rule for target.
+CMakeFiles/server4.dir/all:
+	$(MAKE) -f CMakeFiles/server4.dir/build.make CMakeFiles/server4.dir/depend
+	$(MAKE) -f CMakeFiles/server4.dir/build.make CMakeFiles/server4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=19,20 "Built target server4"
+.PHONY : CMakeFiles/server4.dir/all
+
+# Include target in all.
+all: CMakeFiles/server4.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/server4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/ServerTest/socket2/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wxx/Project/ServerTest/socket2/build/CMakeFiles 0
+.PHONY : CMakeFiles/server4.dir/rule
+
+# Convenience name for target.
+server4: CMakeFiles/server4.dir/rule
+
+.PHONY : server4
+
+# clean rule for target.
+CMakeFiles/server4.dir/clean:
+	$(MAKE) -f CMakeFiles/server4.dir/build.make CMakeFiles/server4.dir/clean
+.PHONY : CMakeFiles/server4.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/server4.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/my_client.dir
 
 # All Build rule for target.
 CMakeFiles/my_client.dir/all:
 	$(MAKE) -f CMakeFiles/my_client.dir/build.make CMakeFiles/my_client.dir/depend
 	$(MAKE) -f CMakeFiles/my_client.dir/build.make CMakeFiles/my_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=7,8 "Built target my_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=9,10 "Built target my_client"
 .PHONY : CMakeFiles/my_client.dir/all
 
 # Include target in all.
@@ -325,7 +399,7 @@ clean: CMakeFiles/my_client.dir/clean
 CMakeFiles/server2.dir/all:
 	$(MAKE) -f CMakeFiles/server2.dir/build.make CMakeFiles/server2.dir/depend
 	$(MAKE) -f CMakeFiles/server2.dir/build.make CMakeFiles/server2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=13,14 "Built target server2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wxx/Project/ServerTest/socket2/build/CMakeFiles --progress-num=15,16 "Built target server2"
 .PHONY : CMakeFiles/server2.dir/all
 
 # Include target in all.
