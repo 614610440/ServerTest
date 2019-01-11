@@ -63,13 +63,13 @@ int main()
         // memset(recvline, '\0', sizeof(recvline));
         printf ("server waiting...\n");
 
-        if (accept(ser_sock, (struct sockaddr*)NULL, NULL) < 0)
-        {
-            printf("accept socket error: %s(errno: %d)",strerror(errno),errno);
-            continue;   
-        }
+        // if (accept(ser_sock, (struct sockaddr*)NULL, NULL) < 0)
+        // {
+        //     printf("accept socket error: %s(errno: %d)",strerror(errno),errno);
+        //     continue;   
+        // }
 
-        if (recv(ser_sock, recvline, sizeof(recvline), 0) < 0)
+        if (recv(accept_fd, recvline, sizeof(recvline), 0) < 0)
         {
             printf ("recv faile!\n");
         }
