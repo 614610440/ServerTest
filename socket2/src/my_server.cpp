@@ -10,7 +10,7 @@
 #include <unistd.h>
 
 #define MAXLINE 4096
-#define SERVER_ADDR "127.0.0.1"
+#define SERVER_ADDR "192.168.1.111"
 
 using namespace std;
 

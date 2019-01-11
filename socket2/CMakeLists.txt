@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+#cmake_minimum_required(VERSION 3.10)
 project(socket_test2)
 
 add_executable(server src/server.cpp)

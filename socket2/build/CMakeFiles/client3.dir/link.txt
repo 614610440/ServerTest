@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/client3.dir/src/client3.cpp.o  -o client3 
+/usr/bin/c++      CMakeFiles/client3.dir/src/client3.cpp.o  -o client3 -rdynamic 

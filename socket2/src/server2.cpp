@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
     //设置ip为本机IP
-    // server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    // server_addr.sin_addr.s_addr = htonl(0xC0A8016F);
     server_addr.sin_addr.s_addr = inet_addr(ADDR);
   
     if (bind(sockfd, (struct sockaddr*)(&server_addr), sizeof(struct sockaddr)) < 0)
