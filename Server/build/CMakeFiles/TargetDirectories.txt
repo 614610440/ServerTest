@@ -1,3 +1,0 @@
-/home/wxx/Project/ServerTest/Server/build/CMakeFiles/rebuild_cache.dir
-/home/wxx/Project/ServerTest/Server/build/CMakeFiles/server.dir
-/home/wxx/Project/ServerTest/Server/build/CMakeFiles/edit_cache.dir

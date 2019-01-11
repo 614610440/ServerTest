@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/server2.dir/src/server2.cpp.o  -o server2 -rdynamic 
