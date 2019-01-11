@@ -79,7 +79,7 @@ int main()
 
         fgets(sendline, 1024, stdin);
 
-        if (send(ser_sock, sendline, sizeof(sendline), 0) < 0)
+        if (send(accept_fd, sendline, sizeof(sendline), 0) < 0)
         {
             printf ("send faile!\n");
         }
