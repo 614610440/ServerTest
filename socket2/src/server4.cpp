@@ -75,14 +75,14 @@ int main()
         }
         printf ("recive: %s\n", recvline);
 
-        // printf ("server: ");
+        printf ("server: ");
 
-        // fgets(sendline, 1024, stdin);
+        fgets(sendline, 1024, stdin);
 
-        // if (send(ser_sock, sendline, sizeof(sendline), 0) < 0)
-        // {
-        //     printf ("send faile!\n");
-        // }
+        if (send(ser_sock, sendline, sizeof(sendline), 0) < 0)
+        {
+            printf ("send faile!\n");
+        }
     }
 
     close(ser_sock);
