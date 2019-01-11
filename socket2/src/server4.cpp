@@ -6,7 +6,8 @@
 #include <sys/un.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
-#include<unistd.h>
+#include <unistd.h>
+#include <errno.h>
 
 const int port = 8888;
 const char* ip = "192.168.1.111"; //服务器端IP
@@ -62,6 +63,12 @@ int main()
         memset(recvline, '\0', sizeof(recvline));
         printf ("server waiting...\n");
 
+        if (accept(ser_sock, (struct sockaddr*)NULL, NULL) < 0)
+        {
+            printf("accept socket error: %s(errno: %d)",strerror(errno),errno);
+            continue;   
+        }
+
         if (recv(ser_sock, recvline, sizeof(recvline), 0) < 0)
         {
             printf ("recv faile!\n");
@@ -78,5 +85,6 @@ int main()
         // }
     }
 
+    close(ser_sock);
     return 0;
 }
