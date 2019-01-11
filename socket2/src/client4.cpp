@@ -61,6 +61,7 @@ int main(int argc, char const *argv[])
 
         printf("send is done...\nwaiting server msg...");
 
+        // printf("sizeof: %d,  strlen: %d", sizeof(sendline), strlen(sendline));
         if (recv(clt_sock, recvline, sizeof(recvline), 0) < 0)
         {
             printf("recv faile,,.\n");

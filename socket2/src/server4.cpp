@@ -60,7 +60,7 @@ int main()
     char sendline[1024], recvline[1024];
     while (1)
     {
-        memset(recvline, '\0', sizeof(recvline));
+        // memset(recvline, '\0', sizeof(recvline));
         printf ("server waiting...\n");
 
         if (accept(ser_sock, (struct sockaddr*)NULL, NULL) < 0)
