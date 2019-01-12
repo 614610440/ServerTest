@@ -84,11 +84,19 @@ int main(int argc, char const *argv[])
 
         struct sockaddr_in addr_client;
         socklen_t addr_len;
-        int accept_fd = accept(sockfd_server, (struct sockaddr*)&addr_client, &addr_len);
-        if (accept_fd < 0)
+
+        int accept_fd = 0;
+        try
         {
-            perror("accept");
-            return 4;
+            accept_fd = accept(sockfd_server, (struct sockaddr*)&addr_client, &addr_len);
+            if (accept_fd < 0)
+            {
+                printf("accept one faile");
+                continue;
+            }
+        } catch(char) {
+            printf("accept one error");
+            continue; 
         }
 
         char buf[1024];
