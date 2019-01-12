@@ -101,10 +101,10 @@ int main(int argc, char const *argv[])
             continue;
         }
 
-        close(sockfd_server);
-
-        printf("Server shut down\n");
-        return 0;
     }
+
+    close(sockfd_server);
+
+    printf("Server shut down\n");
     return 0;
 }
