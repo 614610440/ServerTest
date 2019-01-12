@@ -6,7 +6,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <assert.h>
-#include <string>
+#include <string.h>
 #include <unistd.h>
 #include <exception>
 
@@ -38,9 +38,10 @@ void * dataHandle(void* sock_fd)
 
         printf ("server send: ");
 
-        fgets(send_line, BUFFER_LENGTH, stdin);
+        // fgets(send_line, BUFFER_LENGTH, stdin);
+        scanf("%s", send_line);
 
-        if (send(handle_fd, send_line, sizeof(send_line), 0) < 0)
+        if (send(handle_fd, send_line, strlen(send_line), 0) < 0)
         {
             printf ("send faile!\n");
         }
