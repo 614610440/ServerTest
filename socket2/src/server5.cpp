@@ -13,11 +13,12 @@
 #define BUFFER_LENGTH 1024
 #define MAX_CONN_LIMIT 512
 
-void dataHandle(void* sock_fd)
+void * dataHandle(void* sock_fd)
 {
     int handle_fd = *((int *)sock_fd);
 
     char recv_line[BUFFER_LENGTH];
+    char send_line[BUFFER_LENGTH];
 
     while (1)
     {
@@ -32,6 +33,15 @@ void dataHandle(void* sock_fd)
         else
         {
             printf("recive: %s", recv_line);
+        }
+
+        printf ("server send: ");
+
+        fgets(send_line, BUFFER_LENGTH, stdin);
+
+        if (send(handle_fd, send_line, sizeof(send_line), 0) < 0)
+        {
+            printf ("send faile!\n");
         }
     }
 }
@@ -84,7 +94,7 @@ int main(int argc, char const *argv[])
         char buf[1024];
         printf("connect from %s, port %d \n", inet_ntop(AF_INET,&addr_client.sin_addr, buf, 1024), ntohs(addr_client.sin_port));
 
-        int thread_create = pthread_create(&thread_id, NULL, (void *)&dataHandle, (void *)&accept_fd);
+        int thread_create = pthread_create(&thread_id, NULL, dataHandle, (void *)&accept_fd);
         if (thread_create < 0)
         {
             printf("pthread_create error!\n");

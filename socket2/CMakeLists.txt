@@ -1,6 +1,8 @@
 #cmake_minimum_required(VERSION 3.10)
 project(socket_test2)
 
+find_package(Threads)
+
 add_executable(server src/server.cpp)
 add_executable(client src/client.cpp)
 
@@ -16,4 +18,5 @@ add_executable(client3 src/client3.cpp)
 add_executable(server4 src/server4.cpp)
 add_executable(client4 src/client4.cpp)
 
-add_executable(server5 src/server4.cpp)
+add_executable(server5 src/server5.cpp)
+target_link_libraries(server5 ${CMAKE_THREAD_LIBS_INIT})
