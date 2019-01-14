@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
         return 2;
     }
 
-    char sendline[1024], recvline[1024];
+    char sendline[4096], recvline[4096];
     while (1)
     {
         memset(sendline, '\0', sizeof(sendline));

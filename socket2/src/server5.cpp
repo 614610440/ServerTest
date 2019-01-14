@@ -35,7 +35,9 @@ void * dataHandle(void* sock_fd)
         {
             printf("recive: %s", recv_line);
         }
-
+        
+        if (recv_line == "quit")
+            break;
         printf ("server send: ");
 
         // fgets(send_line, BUFFER_LENGTH, stdin);

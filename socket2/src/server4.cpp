@@ -57,7 +57,7 @@ int main()
         printf("connect from %s, port %d \n", inet_ntop(AF_INET,&peer.sin_addr, buf, 1024), ntohs(peer.sin_port));
     }
 
-    char sendline[1024], recvline[1024];
+    char sendline[4096], recvline[4096];
     while (1)
     {
         // memset(recvline, '\0', sizeof(recvline));
@@ -75,11 +75,13 @@ int main()
         }
         printf ("recive: %s\n", recvline);
 
+        if (recvline == "quit")
+            break;
         printf ("server: ");
 
-        fgets(sendline, 1024, stdin);
+        fgets(sendline, sizeof(sendline), stdin);
 
-        if (send(accept_fd, sendline, sizeof(sendline), 0) < 0)
+        if (send(accept_fd, sendline, strlen(sendline), 0) < 0)
         {
             printf ("send faile!\n");
         }
