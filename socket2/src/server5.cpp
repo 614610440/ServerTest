@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <exception>
 
-#define SOCK_PORT 8888
+#define SOCK_PORT 8080
 #define BUFFER_LENGTH 1024
 #define MAX_CONN_LIMIT 512
 
