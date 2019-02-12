@@ -24,6 +24,10 @@ int main(int argc, char*argv[])
 
     struct sockaddr_in broadcast_addr; //广播地址
     int so_broadcast = 1;
+    struct timeval timeout;
+	timeout.tv_sec = 2; //超时时间为2秒
+	timeout.tv_usec = 0;
+    int i;  //use in for
     //建立数据报套接字
     int client_sock = socket(AF_INET, SOCK_DGRAM, 0);
     if (client_sock < 0)
@@ -41,7 +45,6 @@ int main(int argc, char*argv[])
 		return 2;
 	}
     ifr = ifc.ifc_req;
-    int i;
     for (i = ifc.ifc_len / sizeof(struct ifreq); --i >=0; ifr++)
     {
         if (!strcmp(ifr->ifr_name, "eth0"))
@@ -63,5 +66,19 @@ int main(int argc, char*argv[])
 	int ret = setsockopt(client_sock, SOL_SOCKET, SO_BROADCAST, &so_broadcast,
 			sizeof(so_broadcast));
 
+    int times = 10;
+
+    for (i = 0; i < times; i++)
+    {
+        timeout.tv_sec = 2;
+        timeout.tv_usec = 0;
+
+        ret = sendto(client_sock, IP_FOUND, strlen(IP_FOUND), 0,
+				(struct sockaddr*) &broadcast_addr, sizeof(broadcast_addr));
+		if (ret < 0)
+		{
+			continue;
+		}
+    }
     return 0;
 }

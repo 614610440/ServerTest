@@ -92,6 +92,7 @@ int main()
     
                         //将数据发送给客户端
                         memcpy(buffer, IP_FOUND_ACK, strlen(IP_FOUND_ACK) + 1);
+                        scanf("%s", buffer);
                         count = sendto(server_sock, buffer, strlen(buffer), 0,
                                 (struct sockaddr*) &from_addr, sizeof(struct sockaddr_in));
                     }

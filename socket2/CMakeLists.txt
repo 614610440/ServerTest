@@ -28,3 +28,6 @@ add_executable(bcast_clinet src/bcast_clinet.cpp)
 
 add_executable(bcast_server2 src/bcast_server2.cpp)
 add_executable(bcast_clinet2 src/bcast_clinet2.cpp)
+
+add_executable(bcast_server3 src/bcast_server3.cpp)
+add_executable(bcast_clinet3 src/bcast_clinet3.cpp)
