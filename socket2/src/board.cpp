@@ -14,7 +14,7 @@
 #define BUFFER_LENGTH 1024
 #define MAX_CONN_LIMIT 512
 
-static void bail(const char* on_what)
+int main()
 {
     
 }

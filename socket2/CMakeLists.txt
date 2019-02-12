@@ -20,3 +20,6 @@ add_executable(client4 src/client4.cpp)
 
 add_executable(server5 src/server5.cpp)
 target_link_libraries(server5 ${CMAKE_THREAD_LIBS_INIT})
+
+add_executable(board src/board.cpp)
+add_executable(board src/board.cpp)
