@@ -22,4 +22,9 @@ add_executable(server5 src/server5.cpp)
 target_link_libraries(server5 ${CMAKE_THREAD_LIBS_INIT})
 
 add_executable(board src/board.cpp)
-add_executable(board src/board.cpp)
+
+add_executable(bcast_server src/bcast_server.cpp)
+add_executable(bcast_clinet src/bcast_clinet.cpp)
+
+add_executable(bcast_server2 src/bcast_server2.cpp)
+add_executable(bcast_clinet2 src/bcast_clinet2.cpp)
