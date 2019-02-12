@@ -56,16 +56,16 @@ int main()
 			printf("ok ");	
 		}
 
-        char smsg2[100] = {0};
-        ret=recvfrom(sock, smsg2, 100, 0, (struct sockaddr*)&addrto, (socklen_t*)&nlen);
-		if(ret<=0)
-		{
-			cout<<"read error...."<<sock<<endl;
-		}
-		else
-		{		
-			printf("%s\t", smsg2);	
-		}
+        // char smsg2[100] = {0};
+        // ret=recvfrom(sock, smsg2, 100, 0, (struct sockaddr*)&addrto, (socklen_t*)&nlen);
+		// if(ret<=0)
+		// {
+		// 	cout<<"read error...."<<sock<<endl;
+		// }
+		// else
+		// {		
+		// 	printf("%s\t", smsg2);	
+		// }
 	}
  
 	return 0;
